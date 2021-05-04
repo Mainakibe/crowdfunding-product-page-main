@@ -56,6 +56,7 @@ modalClose.addEventListener('click',()=>{
         modalWrap.style.display='none'
     }
 })
+
 const bottomBtn = document.querySelector('.bottom-btn')
 const modal= document.querySelector('.modal-wrapper')
 modalX = document.querySelector('.close-modal')
@@ -96,19 +97,54 @@ thanksBtn.addEventListener('click',()=>{
 
 
 
-//modal selected active
-// const radio = document.querySelector('.first-radio')
-// const pledge = document.querySelector('.pledge-item')
-// const thanks =document.querySelector('.thanks-wrapper')
+const inputs = document.querySelectorAll("input[type=radio]");
+const modalCards = document.querySelectorAll(".pledge-item");
+for(let i=0;i<inputs.length;i++){
+    // watch the range is document
+    let pledgeLower = modalCards[i].querySelector(".pledge-lower"); 
+    document.addEventListener("change",function(e){
+        if(inputs[i].checked){
+            modalCards[i].style.borderColor = "hsl(176, 50%, 47%)";
+            if(inputs[i].checked){
+                pledgeLower.style.display = "flex";
+            }else{
+                modalCards[i].style.borderColor = "#eee";
+            }
+            
+        }
+        else{
+            // inputs[i].checked=false
+            // modalCards[i].style.borderColor=''
+            // pledgeLower.style.display='none'
+            modalCards[i].style.borderColor = "";
+            pledgeLower.style.display = "none";
+        }
+        })
+}
+const bookmark = document.getElementById("bookmark");
+let flag = false;
+bookmark.addEventListener('click',function(){
+flag = !flag;
+if(flag){
+    const circle = document.getElementById("circle");
+    circle.style.fill = "hsl(176, 72%, 28%)";
+    const icon = document.getElementById("icon");
+    icon.style.fill = "#fff";
+    const words = document.getElementById("bookmarkWord");
+    words.innerHTML = "Bookmarked";
+    bookmark.classList.remove("prevent");
+    bookmark.classList.add("actived");
 
-// radio.addEventListener('click',()=>{
-//   if(pledge.classList.add('active')){
-//         pledge.style.border='5px solid yellow'
-//   }
-
-// })
-
-
+}else{
+    const circle = document.getElementById("circle");
+    circle.style.fill = "#2F2F2F";
+    icon.style.fill = "#B1B1B1";
+    const words = document.getElementById("bookmarkWord");
+    words.innerHTML = "Bookmark";
+    bookmark.classList.add("prevent");
+    bookmark.classList.remove("actived");
+}
+})
 
 
 
