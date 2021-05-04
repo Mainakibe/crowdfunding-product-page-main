@@ -92,7 +92,7 @@ const thanksBtn=document.querySelector('.thanks-btn')
 const successWrapper=document.querySelector('.thanks-wrapper')
 
 thanksBtn.addEventListener('click',()=>{
-    successWrap.style.display='none'
+    successWrap.style.display='none';
 })
 
 
