@@ -21,6 +21,13 @@ p{
     font-weight: 400;
     line-height: 25px;
 }
+a{
+    cursor: pointer;
+    font-size: 13px;
+    color: hsl(175, 29%, 58%);
+    text-decoration: none;
+    font-weight: 400;
+}
 .wrapper{
     max-width: 100%;
     min-height: 150vh;  
@@ -177,15 +184,20 @@ nav a{
 .days{
     width: 30%;
 }
-.lower{
-    padding:30px 0px 0px 0px;
-    
-}
-.green{
-    border-top: 9px solid hsl(176, 50%, 47%);
+.progress{
+    margin:30px 0px 0px 0px;
+    height: 15px;
+    width:95%;
+    background-color: hsl(0, 0%, 93%);   
     border-radius: 20px;
-    width: 95%;
-    margin-left: 15px;
+}
+.progress-done{
+    height: 100%;
+    width: 0%;
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 20px;
+    opacity: 0;
+    transition: 1s ease;
 }
 span{
     color: hsl(0, 0%, 48%);
@@ -285,7 +297,7 @@ button{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;  
-    /* display: none;  */
+    display: none;
 }
 .modal-container{
     display: flex;
@@ -331,10 +343,10 @@ button{
     margin: 15px;
 }
 .label-first{
-    width: 90%;
+    width: 95%;
 }
 label{
-    width: 100%;
+    width:85%;
     font-weight: 700;
     padding: 10px;
     font-size: 12px;  
@@ -352,7 +364,11 @@ label{
     flex-direction: row;
     align-items: center;
     justify-content:center;  
-    width: 90%;
+    width: 100%;
+}
+label:hover{
+    cursor: pointer;
+    color: hsl(176, 50%, 47%);
 }
 label a{
     text-decoration: none;
@@ -396,13 +412,23 @@ button{
     border: none;
     border-radius: 20px;
 }
-.first-btn{
+/* .first-btn{
     color: hsl(0, 0%, 0%);
     font-size: 16px;
     font-weight: 600;
     background-color: white;
     border: 1px solid hsl(0, 0%, 66%);
     padding: 10px 30px;
+} */
+.input{
+    outline: none;
+    border: none;
+    width: 30%;
+    padding: 13px 15px;
+    background-color: hsl(0, 0%, 92%);
+    color: black;
+    font-weight: 700;
+    border-radius: 20px;
 }
 .second-btn{
     color: white;
@@ -472,23 +498,54 @@ button{
         line-height: 25px;
     }
     .header{
+        background:url(/images/image-hero-mobile.jpg) no-repeat;
+        background-size:cover;
         width:100%; 
     }
+    nav{
+        position: relative;
+        width: 100%;
+    }
+    .links{
+        background-color: white; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute; 
+        top: 5.5rem;
+        border-radius: 10px;
+        width: 91%;
+        transform: translateY(-150%);
+        transition: transform 0.2s;  
+    }
+    .showMenu{
+        transform: translateY(0);
+    }
+    .links a{
+        border-bottom: 1px solid rgb(202, 202, 202);
+        padding: 25px;
+        color: hsl(0, 0%, 0%);
+        font-weight: 600;
+        width: 100%;
+    }
+    .links a:last-child{
+        border-bottom: none;
+    }
     .nav-logo{
-        margin-left: -5px;
-
-    }
-    .bookmark-btn{
-        display: none;
-    }
-    .icon{
-        left: -6rem;
+        margin-left: -1px;
     }
     .semi-wrapper{
         height: 300vh;
     }
     .container{
         width: 90%;
+    }
+    .bookmark-btn{
+        display: none;
+    }
+    .icon{
+        left: -6rem;
     }
     .sec-2{
         display: flex;
@@ -522,37 +579,11 @@ button{
         flex-direction: column;
         align-items: flex-start;
     }
-    nav{
-        position: relative;
-        width: 100%;
-    }
-    .links{
-        background-color: white; 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute; 
-        top: 5.5rem;
-        border-radius: 10px;
-        width: 91%;
-        display: none;
-        
-    }
-    .links a{
-        border-bottom: 1px solid rgb(202, 202, 202);
-        padding: 25px;
-        color: hsl(0, 0%, 0%);
-        font-weight: 600;
-        width: 100%;
-    }
     .icons{
         display: block;
         cursor: pointer;
     }
-    .links a:last-child{
-        border-bottom: none;
-    }
+    
     .close-icon{
         display: none;
     }
