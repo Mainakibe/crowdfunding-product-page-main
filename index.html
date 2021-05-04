@@ -46,8 +46,8 @@
                             <button class="btn-left">Back this project</button>
                          </div>
                          <div class="right">
-                             <div class="icon"></div>
-                            <button class="bookmark-btn">Bookmark</button>
+                            <div class="icon"></div>
+                            <button class="bookmark-btn">Bookmark</button> 
                          </div> 
                      </div>
                 </div>
@@ -66,8 +66,8 @@
                             <span>days left</span>
                         </div>
                     </div>
-                    <div class="lower">
-                        <div class="green">
+                    <div class="progress">
+                        <div class="progress-done" data-done="80">
 
                         </div>
                     </div>
@@ -171,9 +171,9 @@
             <div class="pledge-items">
                 <div class="pledge-item">
                     <div class="label-upper">
-                        <input type="radio">
+                        <input type="radio" name="radio" class="first-radio">
                         <div class="label-first">
-                            <label>Pledge with no reward</label> 
+                            <label for="first-radio">Pledge with no reward</label> 
                         </div>
                     </div>
                     <div class="middle-text">
@@ -186,10 +186,10 @@
                 <div class="pledge-item">
                     <div class="pledge-start">
                        <div class="label-upper">
-                        <input type="radio">
+                        <input type="radio" name="radio">
                         <div class="labels">
-                            <label for="bamboo stand">Bamboo Stand</label>
-                            <label for="link"><a href="#">Pledge $25 or more</a></label>
+                            <label for="radio">Bamboo Stand</label>
+                            <a href="#">Pledge $25 or more</a>
                         </div>
                        </div>
                        <div class="middle-text">
@@ -206,7 +206,7 @@
                     <div class="pledge-lower">
                         <small>Enter your pledge</small>
                         <div class="lower-btns">
-                            <button class="first-btn"><span class="dollar">$</span> 25</button>
+                            <input type="number" min="25" value="$ 25" class="input">
                             <button class="second-btn">Continue</button>
                         </div>  
                     </div>
@@ -214,10 +214,10 @@
                 <div class="pledge-item">
                     <div class="pledge-start">
                         <div class="label-upper">
-                            <input type="radio">
+                            <input type="radio" name="radio">
                             <div class="labels">
-                                <label>Black Edition Stand</label>
-                                <label><a href="#">Pledge $75 or more</a></label>
+                                <label for="radio">Black Edition Stand</label>
+                                <a href="#">Pledge $75 or more</a>
                             </div>   
                         </div>
                             
@@ -235,52 +235,46 @@
                     <div class="pledge-lower">
                         <small>Enter your pledge</small>
                         <div class="lower-btns">
-                            <button class="first-btn"> <span class="dollar">$</span> 75</button>
+                            <input type="number" min="75" value="$ 75" class="input">
                             <button class="second-btn">Continue</button>
                         </div> 
                     </div>
                 </div>
-                <div class="pledge-item">
+                <div class="pledge-item" style="border: 1.5px solid hsl(0, 2%, 90%);">
                     <div class="pledge-start">
                         <div class="label-upper">
-                            <input type="radio">
+                            <input type="radio" name="radio" disabled>
                             <div class="labels">
-                                <label>Mahogany Special Edition</label>
-                                <label><a href="#">Pledge $200 or more</a></label>
+                                <label style="color: hsl(0, 0%, 65%);" for="radio">Mahogany Special Edition</label>
+                                <label><a href="#" style="color: hsl(179, 39%, 72%);">Pledge $200 or more</a></label>
                             </div>
                         </div>
 
                         <div class="middle-text">
-                            <p>
+                            <p style="color: hsl(0, 0%, 86%);">
                                 You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
                                 to our Backer member list. Shipping is included.
                             </p>
                         </div>
                         <div class="bottom-left">
-                            <h1>0</h1>
-                            <span class="small">left</span> 
+                            <h1 style="color:hsl(0, 0%, 65%) ;">0</h1>
+                            <span class="small" style="color:hsl(0, 0%, 65%) ;">left</span> 
                         </div>
                            
                     </div>
-                    <div class="pledge-lower">
+                    <!-- <div class="pledge-lower">
                         <small>Enter your pledge</small>
                         <div class="lower-btns">
                             <button class="first-btn"> <span class="dollar">$</span> 200</button>
-                            <button class="second-btn">Continue</button>
-                        </div> 
-                    </div>
+                            <input type="mumber" min="200" value="$ 200" class="input">
+                            <button class="second-btn" style="color:hsl(0, 0%, 65%) ;">Continue</button>
+                        </div>  
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 </div>
-  
-
-    
-
-
-
-  >
 
   <!-- Success modal section -->
 <div class="thanks-wrapper">
