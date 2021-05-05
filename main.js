@@ -57,11 +57,11 @@ modalClose.addEventListener('click',()=>{
     }
 })
 
-const bottomBtn = document.querySelector('.bottom-btn')
+const bottomBtns = document.querySelector('.bottom-btn')
 const modal= document.querySelector('.modal-wrapper')
 modalX = document.querySelector('.close-modal')
 
-bottomBtn.addEventListener('click',()=>{
+bottomBtns.addEventListener('click',()=>{
     if(modal.style.display=='none'){
         modal.style.display='flex'
     }else{
@@ -92,15 +92,14 @@ const thanksBtn=document.querySelector('.thanks-btn')
 const successWrapper=document.querySelector('.thanks-wrapper')
 
 thanksBtn.addEventListener('click',()=>{
-    successWrap.style.display='none'
+    successWrap.style.display='none';
 })
 
 
-
+//radio button
 const inputs = document.querySelectorAll("input[type=radio]");
 const modalCards = document.querySelectorAll(".pledge-item");
 for(let i=0;i<inputs.length;i++){
-    // watch the range is document
     let pledgeLower = modalCards[i].querySelector(".pledge-lower"); 
     document.addEventListener("change",function(e){
         if(inputs[i].checked){
@@ -113,40 +112,9 @@ for(let i=0;i<inputs.length;i++){
             
         }
         else{
-            // inputs[i].checked=false
-            // modalCards[i].style.borderColor=''
-            // pledgeLower.style.display='none'
-            modalCards[i].style.borderColor = "";
-            pledgeLower.style.display = "none";
+            inputs[i].checked=false
+            modalCards[i].style.borderColor=''
+            pledgeLower.style.display='none' 
         }
         })
-}
-const bookmark = document.getElementById("bookmark");
-let flag = false;
-bookmark.addEventListener('click',function(){
-flag = !flag;
-if(flag){
-    const circle = document.getElementById("circle");
-    circle.style.fill = "hsl(176, 72%, 28%)";
-    const icon = document.getElementById("icon");
-    icon.style.fill = "#fff";
-    const words = document.getElementById("bookmarkWord");
-    words.innerHTML = "Bookmarked";
-    bookmark.classList.remove("prevent");
-    bookmark.classList.add("actived");
-
-}else{
-    const circle = document.getElementById("circle");
-    circle.style.fill = "#2F2F2F";
-    icon.style.fill = "#B1B1B1";
-    const words = document.getElementById("bookmarkWord");
-    words.innerHTML = "Bookmark";
-    bookmark.classList.add("prevent");
-    bookmark.classList.remove("actived");
-}
-})
-
-
-
-
-
+    }

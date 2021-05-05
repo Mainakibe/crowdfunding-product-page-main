@@ -494,6 +494,9 @@ button{
 .close-modal{
     cursor: pointer;
 }
+.close-modal:hover{
+    background-color: black;
+}
 
 
 @media screen and (max-width:768px){
